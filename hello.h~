@@ -8,7 +8,7 @@ SC_CTOR(test){
 //	sensitive<<a;
 }
 void testing(void){
-	SC_REPORT_INFO("SC_INFO","Hello SystemC World!");
+	SC_REPORT_INFO(SC_INFO,"Hello SystemC World!");
 }
 ~test(){
 //delete stuff
