@@ -1,1 +1,1 @@
-These are c++ examples I use while teaching basics of systemC 
+These are c++ examples I use while teaching basics of systemC. they include use of classes, templates and features like inheritance. I have included a basic decoder example and some examples found in systemc books as a start. I intend to grow these into a set of systemc starting point examples showing how different features of the library may be used. Feel free to fork, add examples and contribute back.
