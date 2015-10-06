@@ -13,6 +13,10 @@ class Time{
 		void displayTime(void){
 			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";
 		}
+		
+		void display(void){
+			cout<<hours<<":"<<mins<<":"<<secs<<"\n";
+		}
 
 	protected:	int hours;
 			 	int mins;
@@ -39,7 +43,7 @@ class Clock: public Time{
 int main(){
 	Clock clk;
 	clk.setTime(13,25,40);
-	clk.displayTime();
+	clk.display();
 	clk.setAMPM();
 	clk.displayTime();
 	return 0;
