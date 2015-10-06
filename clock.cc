@@ -13,6 +13,10 @@ class Time{
 		void displayTime(void){
 			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";
 		}
+		
+		void display(void){
+			cout<<hours<<":"<<mins<<":"<<secs<<"\n";
+		}
 
 	protected:	int hours;
 			 	int mins;
@@ -23,7 +27,8 @@ class Time{
 class Clock: public Time{
 	public:
 		void setAMPM(void){
-			if(hours>=12){
+			if(hours>=12)
+			{
 				if(hours>12)
 					hours=hours-12;
 				std::string str (" PM");
@@ -38,6 +43,7 @@ class Clock: public Time{
 int main(){
 	Clock clk;
 	clk.setTime(13,25,40);
+	clk.display();
 	clk.setAMPM();
 	clk.displayTime();
 	return 0;
