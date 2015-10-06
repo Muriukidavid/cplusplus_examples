@@ -12,12 +12,19 @@ class Time{
 
 		void displayTime(void){
 			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";
+                        cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\tin
+                        hour clock"<<"\n"; 
 		}
+          
+                   void displayTime24Hours(void){
+                   cout<<zero<<hours<<":"<<mins<<":"<<secs<<"\tin 
+                      hour clock"<<endl;
 
 	protected:	int hours;
 			 	int mins;
 				int secs;
 				char ampm[3];
+                                char zero[1];
 };
 
 class Clock: public Time{
