@@ -1,4 +1,4 @@
-/*          atm.cc                */
+/*          atm.cc             */
 #include "atm.h"
 int main()
 {
