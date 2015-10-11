@@ -1,3 +1,5 @@
+//#ifndef DECODER_H_
+#define DECODER_H_
 #include<systemc.h>
 
 SC_MODULE(decoder){
