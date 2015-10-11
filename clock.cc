@@ -20,7 +20,7 @@ class Time{
 				char ampm[3];
 };
 
-class Clock: public Time{
+class Clock12: public Time{
 	public:
 		void setAMPM(void){
 			if(hours>=12){
@@ -35,10 +35,29 @@ class Clock: public Time{
 		}
 };
 
+class Clock24: public Time{
+	public:
+		void setTwentyFour(void){
+			if(hours>24){
+			  	hours=hours-24;
+			std::string str (" hr");
+			str.copy(ampm, 3, 0);
+		   }else{
+		   	std::string str (" hr");
+		   	str.copy(ampm, 3, 0);
+		   }
+	}
+};
+			
 int main(){
-	Clock clk;
-	clk.setTime(13,25,40);
+	Clock12 clk;
+	clk.setTime(6,25,40);
 	clk.setAMPM();
 	clk.displayTime();
+	Clock24 clkt;
+	clkt.setTime(17,47,49);
+	clkt.setTwentyFour();
+	clkt.displayTime();
 	return 0;
 }
+
