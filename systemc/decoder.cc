@@ -1,3 +1,6 @@
+//g++ -c sc_try.cpp
+//g++ test.o -o test
+
 #include"decoder.h"
 #include"driver.h"
 #include"monitor.h"
