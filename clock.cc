@@ -34,11 +34,26 @@ class Clock: public Time{
 			}
 		}
 };
-
+class Clock24: public Time{
+	public:
+		void setHRS(void){
+		std::string str (" HRS");
+		str.copy(hrs, 4, 0);
+		}
+			void displayTime24(void){
+			cout<<hours<<":"<<mins<<":"<<secs<<hrs<<"\n";
+		}
+				protected:
+				 char hrs[4];
+};
 int main(){
 	Clock clk;
 	clk.setTime(13,25,40);
 	clk.setAMPM();
 	clk.displayTime();
+	Clock24 hrs;
+	hrs.setTime(13,25,40);
+	hrs.setHRS();
+	hrs.displayTime24();
 	return 0;
 }
