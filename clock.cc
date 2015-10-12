@@ -11,7 +11,11 @@ class Time{
 		}
 
 		void displayTime(void){
-			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";
+         cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"  . . . . . .In 12H clock system.\n";			
+		}
+		/*This function displays the values of the time in 24H clock system without the AM/PM */
+		void displayTime_12Hours(void){
+			cout<<hours<<":"<<mins<<":"<<secs<<"  . . . . . .In 24H clock system.\n";
 		}
 
 	protected:	int hours;
@@ -37,7 +41,8 @@ class Clock: public Time{
 
 int main(){
 	Clock clk;
-	clk.setTime(13,25,40);
+	clk.setTime(22,2,40);
+	clk.displayTime_12Hours(); /*Put before the setAMPM() call for the () not to interfere with the initialised values in setTime()*/
 	clk.setAMPM();
 	clk.displayTime();
 	return 0;
