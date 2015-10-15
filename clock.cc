@@ -5,12 +5,10 @@ using namespace std;
 class Time{
 	public:
 	Time()	//consturctor initializes variables and other objects
-	{
-	hours=mins=secs=-1;}	//end of constructor
+	{hours=mins=secs=-1;}	//end of constructor
 	~Time()	//destructor destroys/closes resources to reclaim memory
-	{
-		
-	}	
+	{}	//end of destructor
+	
 		void setTime(int sethours, int setmins, int setsecs){
 		if(sethours>23 || sethours<0)
 		{
@@ -41,7 +39,7 @@ class Time{
 			int mins;
 			int secs;
 			char ampm[3];
-};
+};	//end class Time
 
 class Clock12: public Time{
 	public:
@@ -60,16 +58,7 @@ class Clock12: public Time{
 
 class Clock24: public Time{
 	public:
-		/*void setTwentyFour(void){
-			if(hours>24){
-			  	hours=hours-24;
-			std::string str (" hr");
-			str.copy(ampm, 3, 0);
-		   }else{
-		   	std::string str (" hr");
-		   	str.copy(ampm, 3, 0);
-		   }*/
-		   void displayTime(void){
+		void displayTime(void){
 		if(hours == -1 ||mins==-1||secs==-1){
 		cout<<"Invalid time"<<endl;}
 		else{
@@ -78,8 +67,6 @@ class Clock24: public Time{
 };
 			
 int main(){
-	//Time tme;
-	//tme.setTime(17,47,30);
 	Clock12 clk;
 	clk.setTime(16,50,44);
 	clk.setAMPM();
