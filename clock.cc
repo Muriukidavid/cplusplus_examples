@@ -4,23 +4,44 @@ using namespace std;
 
 class Time{
 	public:
+	Time()	//consturctor initializes variables and other objects
+	{hours=mins=secs=-1;}	//end of constructor
+	~Time()	//destructor destroys/closes resources to reclaim memory
+	{}	//end of destructor
+	
 		void setTime(int sethours, int setmins, int setsecs){
-			hours = sethours;
-			mins = setmins;
-			secs=setsecs;
+		if(sethours>23 || sethours<0)
+		{
+			cout<<"Invalid hours"<<endl;
+			}else{
+			hours = sethours;}
+		if(setmins>59 || setmins<0)
+		{
+			cout<<"Invalid minutes"<<endl;}
+			else{
+			mins = setmins;}
+		if(setsecs>59 || setsecs<0)
+		{
+			cout<<"Invalid seconds"<<endl;}
+			else{
+			secs=setsecs;}
+			
 		}
 
 		void displayTime(void){
-			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";
+		if(hours == -1 ||mins==-1||secs==-1){
+		cout<<"Invalid time"<<endl;}
+		else{
+			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";}
 		}
 
 	protected:	int hours;
-			 	int mins;
-				int secs;
-				char ampm[3];
-};
+			int mins;
+			int secs;
+			char ampm[3];
+};	//end class Time
 
-class Clock: public Time{
+class Clock12: public Time{
 	public:
 		void setAMPM(void){
 			if(hours>=12){
@@ -35,10 +56,24 @@ class Clock: public Time{
 		}
 };
 
+class Clock24: public Time{
+	public:
+		void displayTime(void){
+		if(hours == -1 ||mins==-1||secs==-1){
+		cout<<"Invalid time"<<endl;}
+		else{
+			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";}
+		}
+};
+			
 int main(){
-	Clock clk;
-	clk.setTime(13,25,40);
+	Clock12 clk;
+	clk.setTime(16,50,44);
 	clk.setAMPM();
 	clk.displayTime();
+	Clock24 clkt;
+	clkt.setTime(17,47,60);
+	clkt.displayTime();
 	return 0;
 }
+
