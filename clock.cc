@@ -4,10 +4,11 @@ using namespace std;
 
 class Time{
 	public:
-	Time()	//consturctor initializes variables and other objects
-	{hours=mins=secs=-1;}	//end of constructor
-	~Time()	//destructor destroys/closes resources to reclaim memory
-	{}	//end of destructor
+	Time(){	//consturctor initializes variables and other objects
+		hours=mins=secs=-1;
+	}	//end of constructor
+	
+	~Time(){}	//destructor destroys/closes resources to reclaim memory
 	
 		void setTime(int sethours, int setmins, int setsecs){
 		if(sethours>23 || sethours<0)
@@ -28,12 +29,8 @@ class Time{
 			
 		}
 
-		void displayTime(void){
-		if(hours == -1 ||mins==-1||secs==-1){
-		cout<<"Invalid time"<<endl;}
-		else{
-			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";}
-		}
+		virtual void displayTime(void){}
+		
 
 	protected:	int hours;
 			int mins;
@@ -54,6 +51,13 @@ class Clock12: public Time{
 				str.copy(ampm, 3, 0);
 			}
 		}
+		void displayTime(void){
+		if(hours == -1 ||mins==-1||secs==-1){
+		cout<<"Invalid time"<<endl;}
+		else{
+			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";
+			}
+		}
 };
 
 class Clock24: public Time{
@@ -68,11 +72,11 @@ class Clock24: public Time{
 			
 int main(){
 	Clock12 clk;
-	clk.setTime(16,50,44);
+	clk.setTime(16,50,29);
 	clk.setAMPM();
 	clk.displayTime();
 	Clock24 clkt;
-	clkt.setTime(17,47,60);
+	clkt.setTime(17,47,03);
 	clkt.displayTime();
 	return 0;
 }
