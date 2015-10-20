@@ -23,8 +23,7 @@ SC_CTOR(monitor){
 }
 
 void monita(void){
-cout<<"at "<<sc_time_stamp()<<" input is: "<<m_in1<<" outputs are: "<<m_out1<<" and "<<m_out2<<endl;
-cout<<"at "<<sc_time_stamp()<<" input is: "<<m_in2<<" outputs are: "<<m_out3<<" and "<<m_out4<<endl;
+cout<<"at "<<sc_time_stamp()<<" with inputs: "<<m_in1<<" and "<<m_in2<<" outputs are: "<<m_out1<<" and "<<m_out2<<" and "<<m_out3<<" and "<<m_out4<<endl;
 }
 
 };
