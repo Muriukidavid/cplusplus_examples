@@ -1,3 +1,10 @@
+/**
+*This is aprogram that tries to show how an atm machine works
+*it asks the user for name and pin which by default is set to 1234, sets the default amount in the account to be 3000
+*and allows the user to perform a number of transaction such as withdrawal, deposit and even check balance
+*wATCH
+*/
+
 #include<iostream>
 #include<string>
 using namespace std;
@@ -14,22 +21,29 @@ class bank{
 
 class money_machine{
 	protected:
-		  int balance, flag, amount, checkout;
+		  int balance, flag, amount, checkout, pin;
 		  std::string name;
 	public:
 		  void input_name();
-		  void interface();
+		  int interface();
 };
 void money_machine::input_name(){
-	cout<<"Please enter your name "<<endl;
+	cout<<"Name: ";
 	cin>>name;
+        cout<<"Pin : ";
+	cin>>pin;
 }
 
-void money_machine::interface(){
+int money_machine::interface(){
+	if (pin != 1234)      //Checks the pin with the default which is 1234
+	{
+		cout<<"I'm sorry you entered the wrong pin!"<<endl<<"Check and try again"<<endl;
+		return 1;
+	}
 	cout<<"********************************"<<endl;
 	cout<<"  Welcome "<<name<<endl;
 	cout<<"Your default standard account has 3000"<<endl;
-	balance = 3000;
+	balance = 3000;   //The default amount in the account is set to 3000 which can be changed
 	while (1){
 		cout<<"______________________________"<<endl;
 		cout<<"Press 1 for Balance\t";
@@ -82,7 +96,7 @@ void money_machine::interface(){
 	
 	cout<<"\nThank you!"<<endl;
         cout<<"********************************"<<endl;
-
+        return 0;
 }
 
 
