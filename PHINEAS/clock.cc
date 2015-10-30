@@ -4,39 +4,55 @@ using namespace std;
 
 class Time{
 	public:
+	Time(){	//consturctor initializes variables and other objects
+		hours=mins=secs=-1;
+	}	//end of constructor
+	
+	~Time(){}	//destructor destroys/closes resources to reclaim memory
+	
 		void setTime(int sethours, int setmins, int setsecs){
-			if (sethours >= 0 && sethours <= 23){hours = sethours;}
-			else{hours = -1; cout<<"Hours Invalid!"<<endl;}
-			
-			if(setmins >= 0 && setmins <= 39){mins = setmins;}
-			else{mins = -1;cout <<"Minutes Invalid!"<<endl;}
-			
-			if(setsecs >=0 && setsecs <= 59){secs = setsecs;}
-			else{secs = -1;cout<<"Seconds Invalid!"<<endl;}
+		if(sethours>23 || sethours<0)
+		{
+			cout<<"Invalid hours"<<endl;
+			}else{
+			hours = sethours;}
+		if(setmins>59 || setmins<0)
+		{
+			cout<<"Invalid minutes"<<endl;}
+			else{
+			mins = setmins;}
+		if(setsecs>59 || setsecs<0)
+		{
+			cout<<"Invalid seconds"<<endl;}
+			else{
+			secs=setsecs;}
 			
 		}
 
+<<<<<<< HEAD
 		void displayTime(void){
-		        if (hours < 0 || mins < 0 || secs < 0){}
-		        else{cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\tin 12-hour clock"<<"\n";}
+			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";
 		}
 		
-                void displayTime24Hours(void){
-                	if(hours < 0 || mins < 0 || secs < 0 ){}
-                	else{cout<<zero<<hours<<":"<<mins<<":"<<secs<<"\tin 24-hour clock"<<endl;}
-                }  
+		void display(void){
+			cout<<hours<<":"<<mins<<":"<<secs<<"\n";
+		}
+=======
+		virtual void displayTime(void){}
+		
+>>>>>>> 928598d90f8af867c2d49d911cfcd860e08ad9c2
 
 	protected:	int hours;
-			 	int mins;
-				int secs;
-				char ampm[3];
-				char zero[1];
-};
+			int mins;
+			int secs;
+			char ampm[3];
+};	//end class Time
 
-class Clock: public Time{
+class Clock12: public Time{
 	public:
 		void setAMPM(void){
-			if(hours>=12){
+			if(hours>=12)
+			{
 				if(hours>12)
 					hours=hours-12;
 				std::string str (" PM");
@@ -46,15 +62,39 @@ class Clock: public Time{
 				str.copy(ampm, 3, 0);
 			}
 		}
-
+		void displayTime(void){
+		if(hours == -1 ||mins==-1||secs==-1){
+		cout<<"Invalid time"<<endl;}
+		else{
+			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";
+			}
+		}
 };
 
+class Clock24: public Time{
+	public:
+		void displayTime(void){
+		if(hours == -1 ||mins==-1||secs==-1){
+		cout<<"Invalid time"<<endl;}
+		else{
+			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";}
+		}
+};
+			
 int main(){
+<<<<<<< HEAD
 	Clock clk;
-	clk.setTime(24,39,50);
-//	clk.setZero();
-	clk.displayTime24Hours();
+	clk.setTime(13,25,40);
+	clk.display();
+=======
+	Clock12 clk;
+	clk.setTime(16,50,29);
+>>>>>>> 928598d90f8af867c2d49d911cfcd860e08ad9c2
 	clk.setAMPM();
 	clk.displayTime();
+	Clock24 clkt;
+	clkt.setTime(17,47,03);
+	clkt.displayTime();
 	return 0;
 }
+
