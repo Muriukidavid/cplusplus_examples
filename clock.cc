@@ -9,19 +9,22 @@ class Time{
 			mins = setmins;
 			secs=setsecs;
 		}
-
+		/*Display function for the 12HR format */
 		void displayTime(void){
-         cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"  . . . . . .In 12H clock system.\n";			
+			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"  . . . . . .In 12H clock system.\n";
 		}
-		/*This function displays the values of the time in 24H clock system without the AM/PM */
-		void displayTime_12Hours(void){
-			cout<<hours<<":"<<mins<<":"<<secs<<"  . . . . . .In 24H clock system.\n";
+		/*Display function for the 24HR format */
+		void displayTime24(void){
+			cout<<hours<<":"<<mins<<":"<<secs<<hr<<"  . . . . . .In 24H clock system.\n";
 		}
 
 	protected:	int hours;
 			 	int mins;
 				int secs;
+				char hr[3];
 				char ampm[3];
+				
+			
 };
 
 class Clock: public Time{
@@ -39,11 +42,31 @@ class Clock: public Time{
 		}
 };
 
+class military: public Time{
+public:
+	void set_military()
+	{
+		hours=hours;
+		 mins=mins; 
+		 secs=secs;
+
+		std::string str (" HR");
+		str.copy(hr, 3, 0);
+	}
+	
+};
+
 int main(){
 	Clock clk;
-	clk.setTime(22,2,40);
-	clk.displayTime_12Hours(); /*Put before the setAMPM() call for the () not to interfere with the initialised values in setTime()*/
+	clk.setTime(13,25,40);
 	clk.setAMPM();
 	clk.displayTime();
+
+
+	military milt;
+	milt.setTime(13,25,40);	
+	milt.set_military();
+	milt.displayTime24();
+	
 	return 0;
 }
