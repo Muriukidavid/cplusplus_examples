@@ -16,7 +16,7 @@ SC_CTOR(decoder){
 }
 
 void decode(void){
-	b=(a==0)?1:0;
+	b=(a==0)?1:0; //a shorthand notation of implementing an IF statement
 	c=(a==1)?1:0;
 }
 };
