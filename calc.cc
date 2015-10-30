@@ -1,12 +1,12 @@
 #include<iostream>
-#include"tempcalc.h"
+#include"calc.h"
 
 using namespace std;
 
-int main(){
-int sum, a=2, b=4;
+int main(int argc, char* argv[]){
+int sum, a=2.3, b=4.2;
 
-calculator<int> calc;
+calculator calc;
 sum = calc.add(a,b);
 cout<<"The sum of "<<a<<" and "<<b<<" is "<<sum<<endl;
 return 0;
