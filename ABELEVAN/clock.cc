@@ -29,8 +29,18 @@ class Time{
 			
 		}
 
+<<<<<<< HEAD
+		void displayTime(void){
+			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";
+		}
+		
+		void display(void){
+			cout<<hours<<":"<<mins<<":"<<secs<<"\n";
+		}
+=======
 		virtual void displayTime(void){}
 		
+>>>>>>> 928598d90f8af867c2d49d911cfcd860e08ad9c2
 
 	protected:	int hours;
 			int mins;
@@ -41,7 +51,8 @@ class Time{
 class Clock12: public Time{
 	public:
 		void setAMPM(void){
-			if(hours>=12){
+			if(hours>=12)
+			{
 				if(hours>12)
 					hours=hours-12;
 				std::string str (" PM");
@@ -71,8 +82,14 @@ class Clock24: public Time{
 };
 			
 int main(){
+<<<<<<< HEAD
+	Clock clk;
+	clk.setTime(13,25,40);
+	clk.display();
+=======
 	Clock12 clk;
 	clk.setTime(16,50,29);
+>>>>>>> 928598d90f8af867c2d49d911cfcd860e08ad9c2
 	clk.setAMPM();
 	clk.displayTime();
 	Clock24 clkt;
