@@ -1,0 +1,6 @@
+#backup files
+*~
+*.o
+clock
+systemc/hello
+systemc/decoder
