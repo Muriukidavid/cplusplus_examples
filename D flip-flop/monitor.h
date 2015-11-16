@@ -25,7 +25,7 @@ SC_MODULE(monitor)
 	}
 
 	void monita(void){
-	cout<<"at "<<sc_time_stamp()<<" D is: "<<D_m<<" Q is: "<<Q_m<<" notQ is: "<<Qn_m<<endl;
+	cout<<"at "<<sc_time_stamp()<<" D is: "<<D_m<<" Q8 is: "<<Q_m<<" notQ8 is: "<<Qn_m<<endl;
 	}
 };
 
