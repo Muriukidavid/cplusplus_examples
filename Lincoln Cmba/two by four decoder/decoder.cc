@@ -11,11 +11,11 @@ decoder dec("decoder_instance");
 driver dr("driver");
 monitor mn("monitor");
 //interconnections b2in modules
-dr.d_a1(in1);
+dr.b1(in1);
 dec.a1(in1);
 mn.m_a1(in1);
 
-dr.d_a2(in2);
+dr.b2(in2);
 dec.a2(in2);
 mn.m_a2(in2);
 
@@ -34,11 +34,11 @@ mn.m_b4(out4);
 
 //create a trace file with nanosecond resolution
 sc_trace_file *tf;
-tf = sc_create_vcd_trace_file("2 by 4 timing_diagram");
+tf = sc_create_vcd_trace_file("2by4timing_diagram");
 tf->set_time_unit(1, SC_NS);
 //trace the signals interconnecting modules
-sc_trace(tf, in1, "binary_input one");
-sc_trace(tf, in2, "binary_input two");// signals to be traced
+sc_trace(tf, in1, "binary_input_one");
+sc_trace(tf, in2, "binary_input_two");// signals to be traced
 sc_trace(tf, out1, "input_is_zero");
 sc_trace(tf, out2, "input_is_one");
 sc_trace(tf, out3, "input_is_two");

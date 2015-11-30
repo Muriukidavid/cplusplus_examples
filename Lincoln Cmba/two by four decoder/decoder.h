@@ -7,7 +7,7 @@ sc_out<bool> b1,b2,b3,b4;
 //constructor: where the processes are bound to simulation kernel
 SC_CTOR(decoder){
 	SC_METHOD(decode);
-	sensitive<<a;
+	sensitive<<a1<<a2;
 	//dont_initialize();
 }
 
