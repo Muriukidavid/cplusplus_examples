@@ -1,0 +1,4 @@
+#backup, object files (to be ignored)
+*~
+*o
+main
