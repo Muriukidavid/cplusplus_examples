@@ -29,7 +29,7 @@ class Time{
 			
 		}
 
-<<<<<<< HEAD
+
 		void displayTime(void){
 			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\tin 12-hour clock"<<"\n";
 		}
@@ -44,7 +44,7 @@ class Time{
 				char ampm[3];
 				char zero[1];
 };
-=======
+
 		virtual void displayTime(void){}
 		
 
@@ -53,7 +53,6 @@ class Time{
 			int secs;
 			char ampm[3];
 };	//end class Time
->>>>>>> 928598d90f8af867c2d49d911cfcd860e08ad9c2
 
 class Clock12: public Time{
 	public:
@@ -68,7 +67,7 @@ class Clock12: public Time{
 				str.copy(ampm, 3, 0);
 			}
 		}
-<<<<<<< HEAD
+
 //		void setZero(void){
 //			if(hours<=9){
 //				std::string str("0");
@@ -78,7 +77,7 @@ class Clock12: public Time{
 //			
 //			}
 //		}
-=======
+
 		void displayTime(void){
 		if(hours == -1 ||mins==-1||secs==-1){
 		cout<<"Invalid time"<<endl;}
@@ -86,7 +85,6 @@ class Clock12: public Time{
 			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";
 			}
 		}
->>>>>>> 928598d90f8af867c2d49d911cfcd860e08ad9c2
 };
 
 class Clock24: public Time{
@@ -100,15 +98,12 @@ class Clock24: public Time{
 };
 			
 int main(){
-<<<<<<< HEAD
 	Clock clk;
 	clk.setTime(13,25,40);
 //	clk.setZero();
 	clk.displayTime24Hours();
-=======
 	Clock12 clk;
 	clk.setTime(16,50,29);
->>>>>>> 928598d90f8af867c2d49d911cfcd860e08ad9c2
 	clk.setAMPM();
 	clk.displayTime();
 	Clock24 clkt;
