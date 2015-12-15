@@ -37,12 +37,12 @@ sc_trace_file *tf;
 tf = sc_create_vcd_trace_file("timing_diagram");
 tf->set_time_unit(1, SC_NS);
 //trace the signals interconnecting modules
-sc_trace(tf, in1, "binary_input 1"); // signals to be traced
-sc_trace(tf, in2, "binary_input 2"); 
-sc_trace(tf, out1, "input_is_zero");
-sc_trace(tf, out2, "input_is_one");
-sc_trace(tf, out3, "input_is_one");
-sc_trace(tf, out4, "input_is_one");
+sc_trace(tf, in1, "in1"); // signals to be traced
+sc_trace(tf, in2, "in2"); 
+sc_trace(tf, out1, "out1");
+sc_trace(tf, out2, "out2");
+sc_trace(tf, out3, "out3");
+sc_trace(tf, out4, "out4");
 
 //run a simulation for 20 systemc nano-seconds
 if( !sc_pending_activity() )

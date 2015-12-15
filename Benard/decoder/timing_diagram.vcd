@@ -1,5 +1,5 @@
 $date
-     Oct 30, 2015       15:34:47
+     Dec 14, 2015       17:05:36
 $end
 
 $version
@@ -11,12 +11,12 @@ $timescale
 $end
 
 $scope module SystemC $end
-$var wire    1  aaaaa  binary_input 1       $end
-$var wire    1  aaaab  binary_input 2       $end
-$var wire    1  aaaac  input_is_zero       $end
-$var wire    1  aaaad  input_is_one       $end
-$var wire    1  aaaae  input_is_one       $end
-$var wire    1  aaaaf  input_is_one       $end
+$var wire    1  aaaaa  in1       $end
+$var wire    1  aaaab  in2       $end
+$var wire    1  aaaac  out1       $end
+$var wire    1  aaaad  out2       $end
+$var wire    1  aaaae  out3       $end
+$var wire    1  aaaaf  out4       $end
 $upscope $end
 $enddefinitions  $end
 
