@@ -1,6 +1,10 @@
 #backup files
 *~
+
+#object files
 *.o
-clock
-systemc/hello
+
+#odt files
+*.odt
+
 systemc/decoder
