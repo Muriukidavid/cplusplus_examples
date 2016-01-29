@@ -1,44 +1,87 @@
-#include<iostream>
-#include<string>
-using namespace std;
+ #include<iostream>
+ #include<string>
+ using namespace std;
+ 
+ class Time{
+ 	public:
+ 		void setTime(int sethours, int setmins, int setsecs){
+ 			if (sethours>=0 && sethours<=23;)
+				{hours = sethours;}
+				else {setTime=-1;
 
+<<<<<<< HEAD
+				cout<<"ERROR"<<endl;}
+			 if(setmins>=0 && setmins<=59;)
+				{mins = setmins;}
+				else {setTime=-1;
+				cout<<"ERROR"<<endl;}
+                          if(setsecs>=0 && setsecs<=59;)
+				{secs=setsecs;}
+				else {setTime=-1;
+				cout<<"ERROR"<<endl;}
+			
+ 		}
+ 
+ 		void displayTime(void){
+			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";
+			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\tin 12-hour clock"<<"\n";
+ 		}
+		
+                void displayTime24Hours(void){
+               	cout<<zero<<hours<<":"<<mins<<":"<<secs<<"\tin 24-hour clock"<<endl;
+                }  
+ 
+ 	protected:	int hours;
+ 			 	int mins;
+ 				int secs;
+ 				char ampm[3];
+				char zero[1];
+ };
+ 
+ class Clock: public Time{
+
+ 				str.copy(ampm, 3, 0);
+ 			}
+ 		}
+		}
+ };
+ 
+ int main(){
+ 	Clock clk;
+ 	clk.setTime(13,25,40);
++//	clk.setZero();
++	clk.displayTime24Hours();
+ 	clk.setAMPM();
+ 	clk.displayTime();
+ 	return 0;
+ }
+=======
 class Time{
 	public:
-	Time(){	//consturctor initializes variables and other objects
-		hours=mins=secs=-1;
-	}	//end of constructor
-	
-	~Time(){}	//destructor destroys/closes resources to reclaim memory
-	
 		void setTime(int sethours, int setmins, int setsecs){
-		if(sethours>23 || sethours<0)
-		{
-			cout<<"Invalid hours"<<endl;
-			}else{
-			hours = sethours;}
-		if(setmins>59 || setmins<0)
-		{
-			cout<<"Invalid minutes"<<endl;}
-			else{
-			mins = setmins;}
-		if(setsecs>59 || setsecs<0)
-		{
-			cout<<"Invalid seconds"<<endl;}
-			else{
-			secs=setsecs;}
-			
+			hours = sethours;
+			mins = setmins;
+			secs=setsecs;
+		}
+		/*Display function for the 12HR format */
+		void displayTime(void){
+			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"  . . . . . .In 12H clock system.\n";
+		}
+		/*Display function for the 24HR format */
+		void displayTime24(void){
+			cout<<hours<<":"<<mins<<":"<<secs<<hr<<"  . . . . . .In 24H clock system.\n";
 		}
 
-		virtual void displayTime(void){}
-		
-
 	protected:	int hours;
-			int mins;
-			int secs;
-			char ampm[3];
-};	//end class Time
+			 	int mins;
+				int secs;
+				char hr[3];
+				char ampm[3];
+				
+			
+};
 
-class Clock12: public Time{
+class Clock: public Time{
 	public:
 		void setAMPM(void){
 			if(hours>=12){
@@ -51,33 +94,34 @@ class Clock12: public Time{
 				str.copy(ampm, 3, 0);
 			}
 		}
-		void displayTime(void){
-		if(hours == -1 ||mins==-1||secs==-1){
-		cout<<"Invalid time"<<endl;}
-		else{
-			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";
-			}
-		}
 };
 
-class Clock24: public Time{
-	public:
-		void displayTime(void){
-		if(hours == -1 ||mins==-1||secs==-1){
-		cout<<"Invalid time"<<endl;}
-		else{
-			cout<<hours<<":"<<mins<<":"<<secs<<ampm<<"\n";}
-		}
+class military: public Time{
+public:
+	void set_military()
+	{
+		hours=hours;
+		 mins=mins; 
+		 secs=secs;
+
+		std::string str (" HR");
+		str.copy(hr, 3, 0);
+	}
+	
 };
-			
+
 int main(){
-	Clock12 clk;
-	clk.setTime(16,50,29);
+	Clock clk;
+	clk.setTime(13,25,40);
 	clk.setAMPM();
 	clk.displayTime();
-	Clock24 clkt;
-	clkt.setTime(17,47,03);
-	clkt.displayTime();
+
+
+	military milt;
+	milt.setTime(13,25,40);	
+	milt.set_military();
+	milt.displayTime24();
+	
 	return 0;
 }
-
+>>>>>>> b5f6742e2c980cdf7f8320d68f44ea5aa0c01cda
