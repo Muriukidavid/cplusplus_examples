@@ -1,0 +1,16 @@
+
+Warning: (W506) illegal characters: decoder instance substituted by decoder_instance
+In file: ../../../../src/sysc/kernel/sc_object.cpp:262
+
+Info: (I703) tracing timescale unit set: 1 ns (timing_diagram.vcd)
+at 0 s input is: 0 and 0 outputs are: 1, 0, 0 and 0
+at 5 ns input is: 0 and 1 outputs are: 0, 1, 0 and 0
+at 10 ns input is: 1 and 0 outputs are: 0, 0, 1 and 0
+at 15 ns input is: 1 and 1 outputs are: 0, 0, 0 and 1
+at 20 ns input is: 0 and 0 outputs are: 1, 0, 0 and 0
+at 25 ns input is: 0 and 1 outputs are: 0, 1, 0 and 0
+at 30 ns input is: 1 and 0 outputs are: 0, 0, 1 and 0
+at 35 ns input is: 1 and 1 outputs are: 0, 0, 0 and 1
+at 40 ns input is: 0 and 0 outputs are: 1, 0, 0 and 0
+at 45 ns input is: 0 and 1 outputs are: 0, 1, 0 and 0
+at 50 ns input is: 1 and 0 outputs are: 0, 0, 1 and 0
