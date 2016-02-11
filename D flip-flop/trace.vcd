@@ -1,5 +1,5 @@
 $date
-     Nov 16, 2015       10:09:44
+     Feb 11, 2016       16:39:47
 $end
 
 $version
@@ -13,9 +13,8 @@ $end
 $scope module SystemC $end
 $var wire    1  aaaaa  clock       $end
 $var wire    1  aaaab  D       $end
-$var wire    1  aaaac  dff1_Output_and_dff2_input       $end
+$var wire    1  aaaac  dff1_Output       $end
 $var wire    1  aaaad  Q8       $end
-$var wire    1  aaaae  Qn8       $end
 $upscope $end
 $enddefinitions  $end
 
@@ -28,7 +27,6 @@ $dumpvars
 0aaaab
 0aaaac
 0aaaad
-1aaaae
 $end
 
 #910000
@@ -113,7 +111,6 @@ $end
 1aaaaa
 1aaaac
 1aaaad
-0aaaae
 
 #12000000
 0aaaab
@@ -125,7 +122,6 @@ $end
 1aaaaa
 0aaaac
 0aaaad
-1aaaae
 
 #13500000
 1aaaab
@@ -137,7 +133,6 @@ $end
 1aaaaa
 1aaaac
 1aaaad
-0aaaae
 
 #15000000
 0aaaab
@@ -149,7 +144,6 @@ $end
 1aaaaa
 0aaaac
 0aaaad
-1aaaae
 
 #16500000
 1aaaab
@@ -161,7 +155,6 @@ $end
 1aaaaa
 1aaaac
 1aaaad
-0aaaae
 
 #17810000
 0aaaaa
@@ -173,7 +166,6 @@ $end
 1aaaaa
 0aaaac
 0aaaad
-1aaaae
 
 #19110000
 0aaaaa
