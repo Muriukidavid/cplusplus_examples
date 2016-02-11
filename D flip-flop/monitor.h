@@ -15,17 +15,17 @@ using namespace std;
 
 SC_MODULE(monitor)
 {
-	sc_in<bool> D_m, dclk_m, Q_m, Qn_m;
+	sc_in<bool> D_m, dclk_m, Q_m;
 
 	SC_CTOR(monitor)
 	{
 		SC_METHOD(monita);
-		sensitive<<Q_m<<Qn_m;
+		sensitive<<Q_m;
 		dont_initialize();
 	}
 
 	void monita(void){
-	cout<<"at "<<sc_time_stamp()<<" D is: "<<D_m<<" Q8 is: "<<Q_m<<" notQ8 is: "<<Qn_m<<endl;
+	cout<<"at "<<sc_time_stamp()<<" D is: "<<D_m<<" Q8 is: "<<Q_m<<endl;
 	}
 };
 
